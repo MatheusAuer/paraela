@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html, body{
+    width: 100%;
+    background-color: black;
+}
+.tit{
+    box-shadow: 1px 2px 8px 6px #6b057f;;
+    margin-top: 15px;
+    padding: 5px;
+    border-radius: 20px;
+    margin-left: 25%;
+    width: 50%;
+    background-color: blueviolet;
+}
+.tit h1{
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+.tit p{
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+}
+.container{
+    margin-top: 30px;
+    width: 100%;
+    background-color: rgb(27, 26, 26);
+}
+.film{
+    width: 45%;
+    margin: 30px;
+    text-align: center;
+    display: inline-block;
+}
+.film video{
+    margin-left: 35px;
+    width: 100%;
+    border: 2px solid #6b057f;
+}
+.film p{
+    margin-left: 35px;
+    background-color: #6b057f;
+    text-align: center;
+    padding: 12px;
+    width: 100%;
+    color: white;
+}
+section.middle{
+    text-align: center;
+    margin: 20px;
+}
+.textinho{
+    margin: 10px;
+    padding: 8px;
+    display: inline-block;
+    font-size: 20px;
+    text-align: center;
+    width: 40%;
+    box-shadow: 1px 2px 12px 6px #6b057f;
+    background-color: rgb(49, 50, 49);
+    color: white;
+}
+section.jogo{
+    margin: 15px;
+    border-radius: 40px;
+    background-color: blueviolet;
+}
+.title{
+    padding: 8px;
+    font-size: 32px;
+    color: white;
+    text-align: center;
+}
+.resposta{
+    padding: 2px;
+    font-size: 22px;
+    color: white;
+    text-align: center;
+}
+footer{
+    width: 100%;
+    text-align: center;
+}
+footer a{
+    display: none;
+    margin: 10px;
+    padding-top: 15px;
+    font-size: 30px;
+    text-decoration: none;
+    border: 4px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    box-shadow: 1px 2px 10px 6px #5d046e;
+    cursor: pointer;
+    color: white;
+    background-color: #6b057f;
+    width: 300px;
+    height: 70px;
+}
+footer a:hover{
+    border: 4px solid white;
+    color: black;
+    background-color: purple;
+}

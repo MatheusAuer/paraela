@@ -1,0 +1,142 @@
+<html>
+    <head>
+        <title>Terceira fase</title>
+        <meta charset="utf-8">
+        <link href="parte3.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="tit">
+                <h1>Parabéns meu neném, conseguiu mais uma!</h1>
+                <p>Você é meu orgulho!!! Nesses 4 anos tivemos muitos momentos, muitos altos e baixos mas me orgulho de compartilhar 
+                    essa história com você. E por falar em orgulho, por que não relembrar uma das coisas que você faz que mais me enchem
+                    disso.
+                </p>
+            </div>
+        </header>
+        <section class="movies">
+            <div class="container">
+                <div class="film">
+                    <video src="/video/video1.mp4" controls></video>
+                    <p>Eu amo. Apenas amo. Você não toca só o violão quando faz uma música, você toca o coração e pricipalmente a alma.</p>
+                </div>
+                <div class="film">
+                    <video src="/video/video2.mp4" controls></video>
+                    <p>Isso é apenas pra você contemplar a própria perfeição, você é magnifíca, perfeita. Meu rosto enche de lágrimas
+                        toda vez que ouço você tocar, mas são lágrimas de <b>orgulho!</b>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="middle">
+            <div class="textinho">
+                <h1>Agora vamos aos jogos!</h1>
+                <p>Dessa vez será um jogo de perguntas e respostas, acerte todas e avance para a última etapa.</p>
+            </div>
+        </section>
+
+        <section class="jogo">
+            <div class="title">
+                <h1>Quando nos conhecemos ?</h1>
+            </div>
+            <form class="pergunta">
+                <div class="resposta">
+                    <span>2020</span>
+                    <input type="radio" name="pergunta1" value="incorreta" />
+                    <br>
+                </div>
+                <div class="resposta">
+                    <span>2018</span>
+                    <input type="radio" name="pergunta1" value="correta" />
+                    <br>
+                </div>
+                    <div class="resposta">
+                    <span>2019</span>
+                    <input type="radio" name="pergunta1" value="incorreta" />
+                    <br>
+                </div>
+            </form>
+
+            <div class="title">
+                <h1>Quando foi o nosso role mais louco de todos ?</h1>
+            </div>
+            <form class="pergunta">
+                <div class="resposta">
+                    <span>2020</span>
+                    <input type="radio" name="pergunta1" value="correta" />
+                    <br>
+                </div>
+                <div class="resposta">
+                    <span>2018</span>
+                    <input type="radio" name="pergunta1" value="incorreta" />
+                    <br>
+                </div>
+                    <div class="resposta">
+                    <span>2021</span>
+                    <input type="radio" name="pergunta1" value="incorreta" />
+                    <br>
+                </div>
+                </div>
+                    <div class="resposta">
+                    <span>2019</span>
+                    <input type="radio" name="pergunta1" value="incorreta" />
+                    <br>
+                </div>
+            </form>
+
+            <div class="title">
+                <h1>Quem bola o melhor beck ?</h1>
+            </div>
+            <form class="pergunta">
+                <div class="resposta">
+                    <span>Eu</span>
+                    <input type="radio" name="pergunta1" value="correta" onclick="alert('HAHAHA ADMITIU ENTÃO'); mostrar()" />
+                    <br>
+                </div>
+                <div class="resposta">
+                    <span>Você</span>
+                    <input type="radio" name="pergunta1" value="correta" onclick="alert('Só vou admitir em prol de um bem maior ksks'); mostrar() " />
+                    <br>
+                </div>
+            </form>
+        </section>
+
+        <footer>
+            <a id="botao" href="parte4.html">Te Amo</a>
+        </footer>
+
+        <script>
+            function mostrar(){
+                var btn = document.getElementById('botao');
+                if(btn.style.display == 'inline-block'){
+                    btn.style.display = 'none';
+                }else{
+                    btn.style.display = 'inline-block';
+                }
+            }
+            var elementos = document.querySelectorAll('[type=radio]');
+            for(var i=0; i<elementos.length; i++){
+                elementos[i].addEventListener('change',function(e){
+                    let marcado = e.target.value;
+                    if(marcado == "correta"){
+                        let parentNode = e.target.parentNode;
+                        parentNode.style.backgroundColor = 'green';
+                        let els = parentNode.parentNode.querySelectorAll('[type=radio]');
+                        for(var n=0; n<els.length; n++){
+                            els[n].disabled = true;
+                        }
+                    }else if(marcado == "incorreta"){
+                        let parentNode = e.target.parentNode;
+                        parentNode.style.backgroundColor = 'red';
+                        let els = parentNode.parentNode.querySelectorAll('[type=radio]');
+                        for(var n=0; n<els.length; n++){
+                            els[n].disabled = true;
+                        }
+                        let correta = parentNode.parentNode.querySelector('[value=correta]');
+                        correta.parentNode.style.backgroundColor = 'green';
+                    }
+                })
+            }
+        </script>
+    </body>
+</html>
